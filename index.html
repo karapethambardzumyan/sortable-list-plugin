@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+  <style>
+    .sortable li {
+      width: 200px;
+      height: 30px;
+      background: #d800a8;
+      margin-bottom: 5px;
+      cursor: move;
+      list-style: none;
+      padding: 0;
+      user-select: none;
+    }
+
+    .sortable {
+      width: 200px;
+      padding: 0;
+      margin: 0 50px 0 0;
+      float: left;
+      position: relative;
+    }
+
+    .sortable-selected {
+      opacity: 0.5;
+    }
+
+    .sortable-moved {
+      z-index: 1;
+      position: absolute;
+      box-shadow: 0px 0px 7px 0px #000;
+    }
+
+    .clear {clear: both;}
+  </style>
+</head>
+<body>
+  <ul class="sortable" id="list-1">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+    <li>6</li>
+    <li>7</li>
+    <li>8</li>
+  </ul>
+  <ul class="sortable" id="list-2">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+  </ul>
+  <ul class="sortable" id="list-3">
+    <li>1</li>
+    <li>2</li>
+    <li>3</li>
+    <li>4</li>
+    <li>5</li>
+  </ul>
+  <ul class="sortable" id="list-4">
+    <li>1</li>
+    <li>2</li>
+  </ul>
+  <div class="clear"></div>
+
+  <div id="root"></div>
+  <script src="dist/bundle.js" charset="utf-8"></script>
+</body>
+</html>
